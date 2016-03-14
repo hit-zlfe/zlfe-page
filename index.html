@@ -3,16 +3,41 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>HIT-ZLFE</title>
-</head>
-<body>
-<nav>在这里添加导航</nav>
-<article>
-    <section>HOME</section>
-    <section>ABOUT</section>
-    <section>WORKS</section>
-    <section>CONTACT</section>
-</article>
+    <link href="./static/main.css" rel="stylesheet">
 
-<footer>在这里添加页脚信息</footer>
+    <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <nav>
+
+        <button class="nav-button">
+        </button>
+        <h2 class="nav-text">ZLFE</h2>
+        <div class="nav-link" id="link">
+
+            <ul >
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<article>
+    <section class="section-view" id="home">HOME</section>
+    <section class="section-hiden" id="about">ABOUT</section>
+    <section class="section-hiden" id="works">WORKS</section>
+    <section class="section-hiden" id="contact">CONTACT</section>
+</article>
+<footer></footer>
 </body>
+<script src="./static/main.js"></script>
+
 </html>
