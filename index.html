@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>HIT-ZLFE</title>
-    <link href="./static/main.css" rel="stylesheet">
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>fullPage.js制作网易邮箱6.0介绍页面演示_jQuery插件库</title>
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/jqueryui/1.8.22/jquery-ui.min.js "></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script>
+		$(function(){
+			if($.browser.msie && $.browser.version < 10){
+				$('body').addClass('ltie10');
+			}
+			$.fn.fullpage({
+				verticalCentered: false,
+				anchors: ['page1', 'page2', 'page3', 'page4'],
+				navigation: true,
+				navigationTooltips: ['首页', 'ABOUT', 'WORKS', 'CONNECT']
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div class="section section1">
+			<div class="bg"><img src="images/section1.jpg" alt=""></div>
+			<img src="images/logo.jpg" class="logo">
+			<h1>HIT-ZLFE</h1>
+			<p class="p1">
+				我们团队的简介：
+				我们的团队名字叫做zlfe，目的是想通过在本次IFE的活动中的努力获得自己的技术提升，收获学习对自己的回馈。
+				团队坚持：从基础的小事做起，在小事中不断拓宽视野；
+				我们认同：诚实、协作、勤奋、积累。
+			</p>
+		</div>
 
-    <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-
-
-
-</head>
-
-<body>
-
-    <nav>
-
-        <button class="nav-button">
-        </button>
-        <h2 class="nav-text">ZLFE</h2>
-        <div class="nav-link" id="link">
-
-            <ul >
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#contact">CONACT</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-<article>
-    <section class="section-view" id="home">HOME</section>
-    <section class="section-hiden" id="about">ABOUT</section>
-    <section class="section-hiden" id="works">WORKS</section>
-    <section class="section-hiden" id="contact">CONTACT</section>
-</article>
-<footer></footer>
-</body>
-<script src="./static/main.js"></script>
-
+		<div class="section section2">
+			<div class="bg"><img src="images/section2.jpg" alt=""></div>
+			<img src="images/logo.jpg" class="logo mem1">
+			<div class="mem-text mem1">我是andy,web前端小渣渣一枚。现就读于HIT。代码洁癖症，选择综合征晚期患者</div>
+			<img src="images/logo.jpg" class="logo mem2">
+			<div class="mem-text mem2">balabala,I'm .........</div>
+			<img src="images/logo.jpg" class="logo mem3">
+			<div class="mem-text mem3">balabala,I'm .........</div>
+			<img src="images/logo.jpg" class="logo mem4">
+			<div class="mem-text mem4">balabala,I'm .........</div>
+			<img src="images/logo.jpg" class="logo mem5">
+			<div class="mem-text mem5">balabala,I'm .........</div>
+		</div>
+		<div class="section section3">
+			<div class="bg"><img src="images/section2.jpg" alt=""></div>
+		</div>
+		<div class="section section4">
+			<div class="bg"><img src="images/section2.jpg" alt=""></div>
+		</div>
+	</body>
 </html>
