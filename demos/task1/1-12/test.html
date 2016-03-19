@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css slider</title>
+    <style>
+        body{
+            font-family: "Microsoft yahei", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        .slider-container{
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        .slider-image-list{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 20000px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+        .slider-image-list > li{
+            float: left;
+            height: 100%;
+            line-height: 300px;
+            width: 400px;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+        }
+        .slider-image-list > li:first-child{
+            background-color: deeppink;
+        }
+        .slider-image-list > li:nth-child(2){
+            background-color: seagreen;
+        }
+        .slider-image-list > li:last-child{
+            background-color: yellow;
+        }
+        #a:target ul {
+            left: 0;
+        }
+        #b:target ul{
+            left: -400px;
+        }
+        #c:target ul{
+            left: -800px;
+        }
+        #a:target .slider-propagation > a:not(:nth-child(1)),
+        #b:target .slider-propagation > a:not(:nth-child(2)),
+        #c:target .slider-propagation > a:not(:nth-child(3)){
+            background-color: #fff;
+        }
+        #a:target .slider-propagation > a:nth-child(1),
+        #b:target .slider-propagation > a:nth-child(2),
+        #c:target .slider-propagation > a:nth-child(3){
+            background-color: rgba(0,0,0, 0.6);
+        }
+        .slider-propagation{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+        .slider-propagation a {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            float: left;
+            width: 14px;
+            height: 14px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .slider-propagation a:first-child{
+            left: 44%;
+            background-color: rgba(0,0,0, 0.6);
+        }
+        .slider-propagation a:nth-child(2){
+            left: 50%;
+        }
+        .slider-propagation a:nth-child(3){
+            left: 56%;
+        }
+        .slider-arrow a{
+            position: absolute;
+            top: 50%;
+            display: none;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-top: -20px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            text-align: center;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        .slider-arrow div:first-child > a{
+            display: block;
+        }
+        .slider-arrow a:nth-of-type(odd){
+            left: 20px;
+        }
+        .slider-arrow a:nth-of-type(even){
+            right: 20px;
+        }
+        #a:target .slider-arrow div:nth-child(1) > a,
+        #b:target .slider-arrow div:nth-child(2) > a,
+        #c:target .slider-arrow div:nth-child(3) > a{
+            display: block;
+        }
+        #a:target .slider-arrow div:not(:nth-child(1)) > a,
+        #b:target .slider-arrow div:not(:nth-child(2)) > a,
+        #c:target .slider-arrow div:not(:nth-child(3)) > a{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slider-container">
+    <div id="a">
+        <div id="b">
+            <div id="c">
+                <div class="slider-propagation">
+                    <a href="#a"></a>
+                    <a href="#b"></a>
+                    <a href="#c"></a>
+                </div>
+                <div class="slider-arrow">
+                    <!--1-->
+                    <div>
+                        <a href="#">&lt;</a>
+                        <a href="#b">&gt;</a>
+                    </div>
+                    <!--2-->
+                    <div>
+                        <a href="#a">&lt;</a>
+                        <a href="#c">&gt;</a>
+                    </div>
+                    <!--3-->
+                    <div>
+                        <a href="#b">&lt;</a>
+                        <a>&gt;</a>
+                    </div>
+                </div>
+                <ul class="slider-image-list">
+                    <li>slide1</li>
+                    <li>slide2</li>
+                    <li>slide3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

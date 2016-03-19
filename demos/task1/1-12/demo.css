@@ -1,0 +1,106 @@
+.test-table {
+	text-align: left;
+	border: 1px solid #fff;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+}
+
+.test-table th {
+	background-color:black;
+	color:white;
+	font-size: 15px;
+}
+
+.test-table tr:nth-child(-n+4) {
+ 	color: red;
+}
+
+.test-table tr:nth-last-child(2n+1) {
+ 	background-color: #CDCDCD;
+}
+
+.test-form {
+ 	position: relative;
+ 	width: 240px;
+ 	height: 150px;
+}
+
+.test-form input {
+ 	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50px;
+    position: absolute;
+    width: 100px;
+    -moz-transition:width 2s;    /* Firefox 4 */
+	-webkit-transition:width 2s; /* Safari and Chrome */
+	-o-transition:width 2s;    	 /* Opera */  
+	-ms-transform: width 2s;     /* IE9 */
+	transition:width 2s;
+}
+
+input:focus {
+	width: 200px;
+}
+
+.test-banner {
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner {
+	width: 200px;
+	height: 100px;
+	float: left;
+	transition: width 3s;
+}
+
+.test-banner a{
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	width: 20px;
+	height: 20px;
+	background-color: orange;
+	z-index: 99;
+	position: absolute;
+	bottom: 0;
+}
+
+.banner-1{
+	background-color: red;
+}
+
+.banner-1:target~ input{
+	width: 0;
+}
+
+.banner-2{
+	background-color: green;
+}
+
+.banner-2:target{
+	width: 0;
+}
+
+.banner-3{
+	background-color: blue;
+}
+
+.banner-3:target{
+	width: 0;
+}
+
+.click-1 {
+	right: 42px;
+}
+
+.click-2 {
+	right: 21px;
+}
+
+.click-3 {
+	right: 0;
+}
