@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+thead{
+    background-color: black;
+    color:white;
+}
+tbody tr:nth-child(odd){
+    background-color: white;
+}
+tbody tr:nth-child(even){
+    background-color: lightgray;
+}
+tbody tr:hover{
+    background-color: khaki;
+    font-style: oblique;
+}
+tbody tr:nth-child(1),tbody tr:nth-child(2),tbody tr:nth-child(3){
+     color:red;
+ }
+.input{
+    margin-top: 2em;
+    display: inline-block;
+}
+.input input{
+    width: 156px;
+    height: 20px;
+    transition: width 2s ease .3s,height 2s ease-out .1s;
+    -moz-transition:  width 2s ease .3s,height 2s ease-out .1s;
+    -webkit-transition:  width 2s ease .3s,height 2s ease-out .1s;
+    -o-transition: width 2s ease .3s,height 2s ease-out .1s;
+}
+.input input:focus{
+    width: 267px;
+    height: 30px;
+    border-bottom: solid 2px lightblue;
+
+}
+.tag{
+    margin-top: 2em;
+    width: 300px;
+    height:200px;
+    border: solid 3px slategray;
+    position: relative;
+    overflow: hidden;
+}
+li{
+    list-style: none;
+}
+.tag-ul{
+    width: 300px;
+    height:100%;
+    position: relative;
+    transition: transform 2s ease .3s;
+    -moz-transition:  transform 2s ease .3s;
+    -webkit-transition:  transform 2s ease .3s;
+    -o-transition: transform 2s ease .3s;
+
+
+}
+.tag-ul li{
+    display: inline-block;
+    position: absolute;
+    height:200px ;
+    width: 295px;
+    z-index: 999;
+
+}
+
+
+
+.tag-ul li:nth-child(1){
+    background-color: lemonchiffon;
+    left:0;
+
+
+}
+
+.tag-ul li:nth-child(2){
+    background-color: darksalmon;
+    left:100%;
+
+}
+
+.tag-ul li:nth-child(3){
+    background-color: steelblue;
+    left:200%;
+
+}
+#banner1:checked~.tag-ul{
+    transform: translateX(0);
+    -moz-transform:translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+#banner2:checked~.tag-ul{
+    transform: translateX(-100%);
+    -moz-transform:translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+#banner3:checked~.tag-ul{
+    transform: translateX(-200%);
+    -moz-transform:translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+}
+.tag-button{
+
+    position: absolute;
+    bottom:2px;
+    right: 2px;
+    z-index: 1;
+}
+.tag-button li{
+    z-index: 1;
+    text-align: center;
+    width: 1em;
+    float:left;
+    margin-left: 0.3em;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    background-color: rgba(123,123,123,0.5);
+}
