@@ -1,0 +1,61 @@
+img {
+	width: 80px;
+	height: 80px;
+}
+
+span {
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+	font-family: 'Microsoft Yahei','Arial';
+}
+
+.container,.center,.left,.right{
+	padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /**/ 
+  padding: 20px;
+  background-color: #eee;
+  border-color: #999;
+  min-width: 600px;
+}
+
+.center,.left,.right {
+	background-color: #fff;
+}
+
+.center {
+	flex: 1;
+	margin: 0 20px;
+	padding: 20px;
+}
+
+.left {
+	width: 200px;
+	padding: 20px;
+}
+
+.right {
+	width: 120px;
+	padding: 20px 20px 0;
+}
+
+.left img {
+	float: left;
+}
+
+.right img {
+	margin-bottom: 20px;
+}
+
+

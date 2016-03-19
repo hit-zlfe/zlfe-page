@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft Yahei','Arial';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+  background-color: #ccc;
+  width: 400px;
+  height: 200px;
+}
+
+.center {
+	position: relative; /* 非static确保半圆的定位 */
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	background-color: #fc0;
+}
+
+.left {
+	border-radius: 0 0 50px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.right {
+	border-radius: 50px 0 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
