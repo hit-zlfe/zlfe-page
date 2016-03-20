@@ -1,0 +1,39 @@
+.block, .container {
+	margin: 20px; /* 目测题目有问题 不应该是padding 是margin */
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.block {
+	width: 150px;
+	display: block;
+	border: 1px solid #f00;
+}
+
+.block1 {
+	height: 120px;
+}
+.block2 {
+	height: 100px;
+}
+.block3 {
+	height: 40px;
+}
+.block4 {
+	height: 200px;
+	border-color: #0f0;
+}
+
+@media screen and (max-width: 640px){
+	.container {
+	    align-items: flex-start;
+	    flex-wrap: wrap;
+	}
+	.block4 {
+	    order: -1;
+	}
+}
