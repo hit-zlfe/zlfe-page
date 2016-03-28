@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 18</title>
+</head>
+<style type="text/css">
+    li{
+      display: inline-block;
+      background-color: red;
+      padding: 10px;
+      margin-left: 10px;
+      color: white;
+      text-align: center;
+    }
+</style>
+<body>
+    <input id="num-input" type="text"></input>
+    <button id="left-in">左侧入</button>
+    <button id="right-in">右侧入</button>
+    <button id="left-out">左侧出</button>
+    <button id="right-out">右侧出</button>
+    <ul id="queue">
+    </ul>
+<script type="text/javascript">
+    var ul = document.getElementById('queue');
+    var lis = ul.getElementsByTagName('li');
+    var numInput = document.getElementById('num-input');
+    var leftin = document.getElementById('left-in');
+    var leftout = document.getElementById('left-out');
+    var rightin = document.getElementById('right-in');
+    var rightout = document.getElementById('right-out');
+    leftin.onclick = function(){
+        var li = document.createElement('li');
+        if(isNum(numInput.value)){
+            li.innerHTML = numInput.value;
+            li.onclick = function(){
+                this.parentNode.removeChild(this)
+            }
+            if(lis){
+                ul.insertBefore(li, lis[0]);
+            }
+            else{
+              ul.appendChild(li);
+            }
+        }
+        else{
+            alert("It's not a number or it's empty!");
+        }
+    }
+
+    leftout.onclick = function(){
+        if(lis){
+            lis[0].parentNode.removeChild(lis[0]);;
+        }
+        else{
+            alert("There is no number!");
+        }
+    }
+
+    rightin.onclick = function(){
+        var li = document.createElement('li');
+        if(isNum(numInput.value)){
+            li.innerHTML = numInput.value;
+            li.onclick = function(){
+              li.parentNode.removeChild(li);
+            }
+            ul.appendChild(li);
+        }
+        else{
+            alert("It's not a number or it's empty!");
+        }
+    }
+
+    rightout.onclick = function(){
+        if(lis){
+            lis[lis.length-1].parentNode.removeChild(lis[lis.length-1]);
+        }
+        else{
+            alert("There is no number!");
+        }
+    }
+
+    function isNum(num){
+      var re = /^[0-9]+(?!\.)$/;
+      return re.test(num);
+    }
+</script>
+</body>
+</html>

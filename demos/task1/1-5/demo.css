@@ -1,0 +1,235 @@
+*{
+    font-family: 'Microsoft YaHei';/*author:lbd*/
+    margin: 0;/*author:lbd*/
+    padding: 0;/*author:lbd*/
+}
+
+body,article,aside,section,div{
+    box-sizing: border-box;/*author:lbd*/
+}
+
+header{
+    padding:10px 15px;/*author:lbd*/
+    position: relative;/*author:lbd*/
+    width: 100%;/*author:lbd*/
+    background-color: slategrey;/*author:lbd*/
+    overflow: hidden; /* add by yaoleo */
+    zoom: 1;
+}
+
+nav a:link    {color:black;}/*author:lbd*/
+nav a:visited {color:blue;}/*author:lbd*/
+nav a:hover   {color:red;}/*author:lbd*/
+nav a:active  {color:yellow;}/*author:lbd*/
+
+article img{
+    max-width: 100%;/*author:lbd*/
+}
+@media screen and (max-width: 959px) {/* 959? */
+
+    header h1 {
+        position: relative;/*author:lbd*/
+        margin: 0 auto;/*author:lbd*/
+        display: block;/*author:lbd*/
+        text-align: center;/*author:lbd*/
+    }
+    header nav{
+        text-align: center;/*author:lbd*/
+        position: relative;/*author:lbd*/
+        display: block;/*author:lbd*/
+    }
+}
+
+@media screen and (min-width: 960px){
+    header h1{
+        position: relative;/*author:lbd*/
+        margin: 20px 0;/*author:lbd*/
+        width: 300px;/*author:lbd*/
+        display: inline-block;/*author:lbd*/
+    }
+    header nav{
+        position: relative;/*author:lbd*/
+        float: right; /*author:lbd */
+        margin: 30px 20px;/*author:lbd*/
+        display: inline-block;/*author:lbd*/
+    }
+    nav a{
+        margin-right: 15px;/*author:lbd*/
+    }
+}
+
+
+/* author: yaoleo; */
+body {
+    background-color: #dedede;
+}
+ul,li{margin:0; padding:0}
+.container {
+    min-width: 820px;
+}
+
+article{
+    border-style: solid;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    border-right-width: 2px;
+    border-color: #5e5e5e;
+    border-bottom-width: 2px;
+    border-left-width: 0;
+    border-top-width: 0;
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+}
+
+aside {
+    width: 460px;
+    float: right;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+aside h3 {
+    border-left: 3px solid gray;
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-row {
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form-row {
+    overflow: hidden;
+}
+.form-row .left {
+    float: left;
+    text-align: right;
+    width: 35%;
+}
+
+.form-row .right {
+    float: left;
+    width: 65%;
+}
+.form-row .right p{
+    color: gray;
+    font-size: 13px;
+}
+.form-row .center {
+    margin: auto;
+    width: 400px;
+}
+.form-row .button {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #3355d0;
+    color: #fff;
+    font-size: 18px;
+}
+.form-row textarea {
+    width: 70%;
+    height: 80px;
+}
+
+/*author fateice*/
+table{
+    border: solid;
+    border-width:1px;
+    border-color:darkgrey;
+    margin:3px;
+    width:100%;
+}
+
+table td{
+    border-width:1px;
+    padding:8px;
+    width:inherit;
+    border-style:solid;
+    border-color:darkgrey;
+}
+
+table td.tableHead{
+    background-color:#353535;
+    border-right-color:white;
+    color:white;
+}
+
+table td.tableBottom{
+    background-color:darkgrey
+}
+
+.a1{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.a2{
+    font-size:20px;
+    margin-bottom:10px;
+    color:darkgrey;
+}
+
+.a3{
+    font-size:smaller;
+    margin-bottom:10px;
+    color:darkgrey;
+}
+
+.rank{
+    margin-left:20px;
+    margin-bottom:10px;
+}
+#no-style-ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+/*author:zqy*/
+#left-block{
+    margin-right: 500px;
+    min-width: 300px;
+    margin-top: 10px;
+}
+
+.picture-block{
+    display: inline-block;/*加这个就好了，把块级元素改为inline，就可以同行排列了*/
+    border-style: solid;
+    border-color: #dedede;
+    border-width: thin;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+
+    /*width: 140px;
+    height: auto;
+    float: left;*/
+}
+
+.picture-p{
+    text-align: center;
+    text-indent: 0;
+    margin-bottom: 10px;
+}
+
+p{
+    text-indent:0.89cm;
+}
+
+footer{
+    width:100%;
+    height:100px;
+    background-color:slategrey;
+}
+
+footer p{
+    color:white;
+    position:relative;
+    margin:0 auto;
+    text-align:center;
+    padding: 40px;
+}
