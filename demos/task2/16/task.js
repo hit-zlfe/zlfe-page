@@ -34,11 +34,11 @@ function addAqiData() {
             aqiData[city.value]=num.value;
         }
         else{
-            alert("¿ÕÆøÖÊÁ¿±ØÐëÊÇÒ»¸öÕýÊý£¡");
+            alert("输入的数字有误哦");
         }
     }
     else{
-        alert("³ÇÊÐÃûÖ»ÄÜÊÇÖÐÎÄ»òÕßÓ¢ÎÄ×ÖÄ¸£¡");
+        alert("城市名只能包括中英文字母");
     }
 }
 
