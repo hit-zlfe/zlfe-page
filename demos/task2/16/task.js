@@ -1,30 +1,30 @@
 /**
- * aqiData，存储用户输入的空气指数数据
- * 示例格式：
+ * aqiData拢卢麓忙麓垄脫脙禄搂脢盲脠毛碌脛驴脮脝酶脰赂脢媒脢媒戮脻
+ * 脢戮脌媒赂帽脢陆拢潞
  * aqiData = {
- *    "北京": 90,
- *    "上海": 40
+ *    "卤卤戮漏": 90,
+ *    "脡脧潞拢": 40
  * };
  */
 var aqiData = {};
 
 /**
- * 判断数据是否合理
+ * 脜脨露脧脢媒戮脻脢脟路帽潞脧脌铆
  */
 function isPlace(city){
-    var re = /^[\u4E00-\u9FA5a-zA-Z]+$/;//中引文re
+    var re = /^[\u4E00-\u9FA5a-zA-Z]+$/;//脰脨脪媒脦脛re
 
     return re.test(city);
 }
 function isNum(num){
-    var re = /^[0-9]+(?!\.)$/;//数字re
+    var re = /^[0-9]+(?!\.)$/;//脢媒脳脰re
 
     return re.test(num);
 }
 
 /**
- * 从用户输入中获取数据，向aqiData中增加一条数据
- * 然后渲染aqi-list列表，增加新增的数据
+ * 麓脫脫脙禄搂脢盲脠毛脰脨禄帽脠隆脢媒戮脻拢卢脧貌aqiData脰脨脭枚录脫脪禄脤玫脢媒戮脻
+ * 脠禄潞贸盲脰脠戮aqi-list脕脨卤铆拢卢脭枚录脫脨脗脭枚碌脛脢媒戮脻
  */
 function addAqiData() {
     var city = document.getElementById('aqi-city-input');
@@ -34,31 +34,31 @@ function addAqiData() {
             aqiData[city.value]=num.value;
         }
         else{
-            alert("空气质量必须是一个正数！");
+            alert("驴脮脝酶脰脢脕驴卤脴脨毛脢脟脪禄赂枚脮媒脢媒拢隆");
         }
     }
     else{
-        alert("城市名只能是中文或者英文字母！");
+        alert("鲁脟脢脨脙没脰禄脛脺脢脟脰脨脦脛禄貌脮脽脫垄脦脛脳脰脛赂拢隆");
     }
 }
 
 /**
- * 渲染aqi-table表格
+ * 盲脰脠戮aqi-table卤铆赂帽
  */
 function renderAqiList() {
 
     var table=document.getElementById('aqi-table');
-    var thead=document.createElement("thead");//添加表头
+    var thead=document.createElement("thead");//脤铆录脫卤铆脥路
     var thead_tr = document.createElement("tr");
     for (var i = 0;i<3;i++){
         thead_tr.appendChild(document.createElement("td"));
     }
-    thead_tr.childNodes[0].textContent="城市";
-    thead_tr.childNodes[1].textContent="空气质量";
-    thead_tr.childNodes[2].textContent="操作";
+    thead_tr.childNodes[0].textContent="鍩庡競";
+    thead_tr.childNodes[1].textContent="绌烘皵璐ㄩ噺";
+    thead_tr.childNodes[2].textContent="鎿嶄綔";
     thead.appendChild(thead_tr);
 
-    var tbody = document.createElement("tbody");//添加tbody
+    var tbody = document.createElement("tbody");//脤铆录脫tbody
     for(city in aqiData){
         var tr = document.createElement("tr");
         for (var i = 0;i<3;i++){
@@ -66,18 +66,18 @@ function renderAqiList() {
         }
         tr.childNodes[0].textContent=city;
         tr.childNodes[1].textContent=aqiData[city];
-        tr.childNodes[2].innerHTML="<button>删除</button>";
-        tbody.insertBefore(tr,tbody.childNodes[0]);//最前插入
+        tr.childNodes[2].innerHTML="<button>鍒犻櫎</button>";
+        tbody.insertBefore(tr,tbody.childNodes[0]);//脳卯脟掳虏氓脠毛
     }
-    table.replaceChild(thead,table.childNodes[0]);//表头不变
-    table.replaceChild(tbody,table.childNodes[1]);//更新tbody
+    table.replaceChild(thead,table.childNodes[0]);//卤铆脥路虏禄卤盲
+    table.replaceChild(tbody,table.childNodes[1]);//赂眉脨脗tbody
 
 }
 
 
 /**
- * 点击add-btn时的处理逻辑
- * 获取用户输入，更新数据，并进行页面呈现的更新
+ * 碌茫禄梅add-btn脢卤碌脛麓娄脌铆脗脽录颅
+ * 禄帽脠隆脫脙禄搂脢盲脠毛拢卢赂眉脨脗脢媒戮脻拢卢虏垄陆酶脨脨脪鲁脙忙鲁脢脧脰碌脛赂眉脨脗
  */
 function addBtnHandle() {
     addAqiData();
@@ -85,8 +85,8 @@ function addBtnHandle() {
 }
 
 /**
- * 点击各个删除按钮的时候的处理逻辑
- * 获取哪个城市数据被删，删除数据，更新表格显示
+ * 碌茫禄梅赂梅赂枚脡戮鲁媒掳麓脜楼碌脛脢卤潞貌碌脛麓娄脌铆脗脽录颅
+ * 禄帽脠隆脛脛赂枚鲁脟脢脨脢媒戮脻卤禄脡戮拢卢脡戮鲁媒脢媒戮脻拢卢赂眉脨脗卤铆赂帽脧脭脢戮
  */
 function delBtnHandle(target) {
     // do sth.
@@ -97,16 +97,16 @@ function delBtnHandle(target) {
 
 function init() {
 
-    // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
+    // 脭脷脮芒脧脗脙忙赂酶add-btn掳贸露篓脪禄赂枚碌茫禄梅脢脗录镁拢卢碌茫禄梅脢卤麓楼路垄addBtnHandle潞炉脢媒
 
-    // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+    // 脧毛掳矛路篓赂酶aqi-table脰脨碌脛脣霉脫脨脡戮鲁媒掳麓脜楼掳贸露篓脢脗录镁拢卢麓楼路垄delBtnHandle潞炉脢媒
     window.onload=function(){
         var add_btn=document.getElementById('add-btn');
         add_btn.onclick = function (){
-            addBtnHandle();//添加记录
+            addBtnHandle();//脤铆录脫录脟脗录
         }
         var table=document.getElementById('aqi-table');
-        table.onclick=function(event){//事件委托添加点击事件
+        table.onclick=function(event){//脢脗录镁脦炉脥脨脤铆录脫碌茫禄梅脢脗录镁
             var event = event||window.event;
             var target = event.target||event.srcElement;
             if(target.nodeName=="BUTTON"){
