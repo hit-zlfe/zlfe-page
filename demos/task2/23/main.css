@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;justify-content:center;
+    align-items:center;
+
+}
+#tree{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+
+}
+.node{
+    padding-top: 1.5em;
+    border: limegreen 2px solid;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-color: khaki;
+    width: 100px;
+    height:70px;
+    flex-basis: 15%;
+    margin-top: 10px;
+    transition: background-color 1s;
+    -webkit-transition:background-color 1s;
+    -o-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    text-align: center;
+
+}
+#root{
+    flex-basis: 100%;
+}
+#left1{
+    flex-basis: 60%;
+}
+#right1{
+     flex-basis: 40%;
+}
+#left21,#left22,#left23,#right21,#right22{
+    flex-basis: 20%;
+}
+#left31,#left32{
+    flex-basis: 20%;
+}
+#left33,#left34{
+    flex-basis: 10%
+}
+#right31,#right32,#right33,#right34,#right35,#right36{
+    flex-basis: 6.6%
+}
+#contral{
+    margin-top: 2em;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 10%;
+    height: 60px;
+    box-shadow: 2px 2px 2px slategrey;
+}
+input{
+    border-radius: 10px;
+
+    margin-top: 2em;
+    height: 30px;
+    width: 20%;
+}
+#speed{
+    border: fuchsia 2px solid;
+}
+#search-input{
+    border: midnightblue 2px solid;
+}
+#input{
+    margin-top: 2em;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
