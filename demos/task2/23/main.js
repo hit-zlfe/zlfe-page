@@ -1,14 +1,14 @@
-function Node(name){//½Úµã
+function Node(name){//节点
     this.nodeName=name;
     this.Childs=[];
 
 }
-function Tree(data) {//ÐÂ½¨¶þ²æÊ÷£¬¸ù½ÚµãÃûÎªdata
+function Tree(data) {//建立一个树，名为data
     var node = new Node(data);
     this._root = node;
 }
-var nodelist=[];//ÓÃÀ´´æ·Å±éÀúºóµÄ½ÚµãË³Ðò
-function preorder(node){//Ç°Ðò±éÀú
+var nodelist=[];//存储遍历后的节点顺序
+function preorder(node){//先序遍历
     if(node){
         nodelist.push(node.nodeName);
         for(var child in node.Childs){
@@ -17,7 +17,7 @@ function preorder(node){//Ç°Ðò±éÀú
     }
 }
 
-function posorder(node){//ºóÐò±éÀú
+function posorder(node){//后序遍历
     if(node){
         for(var child in node.Childs){
             posorder(node.Childs[child]);
@@ -25,9 +25,9 @@ function posorder(node){//ºóÐò±éÀú
         nodelist.push(node.nodeName);
     }
 }
-var index=0;//µ±Ç°äÖÈ¾½Úµã
+var index=0;//用来记录当前子节点数
 var proNODE=null;
-function render_serch(){//äÖÈ¾µ±Ç°½Úµã
+function render_serch(){//查询时用到的渲染方式
     if(index<nodelist.length){
         if(proNODE)
             proNODE.style.background="khaki";
@@ -47,7 +47,7 @@ function render_serch(){//äÖÈ¾µ±Ç°½Úµã
         return 1;
     }
 }
-function render(){//äÖÈ¾µ±Ç°½Úµã
+function render(){//遍历时用到的渲染方式
     if(index<nodelist.length){
         if(proNODE)
             proNODE.style.background="khaki";
@@ -57,11 +57,11 @@ function render(){//äÖÈ¾µ±Ç°½Úµã
         index++;
     }
 }
-function getSpeed(){//¸Ä±ääÖÈ¾ËÙ¶È£¬Ä¬ÈÏÎª500ms
+function getSpeed(){//获取自定义速度
     var input=document.getElementById('speed');
     return input.value||500;
 }
-function init(){//³õÊ¼»¯½ÚµãÑùÊ½
+function init(){//初始化
     var classnode=document.getElementsByClassName('node');
     for(var n =0;n<classnode.length;n++){
         classnode[n].style.backgroundColor="khaki";
@@ -71,7 +71,7 @@ function init(){//³õÊ¼»¯½ÚµãÑùÊ½
 
 }
 /*
-* ÊÖ¶¯½¨Á¢¶þ²æÊ÷*/
+* 手工建树，有点low*/
 var tree = new Tree('root');
 tree._root.Childs.push(new Node('left1'));
 tree._root.Childs.push(new Node('right1'));
@@ -92,11 +92,11 @@ tree._root.Childs[1].Childs[1].Childs.push(new Node('right35'));
 tree._root.Childs[1].Childs[1].Childs.push(new Node('right36'));
 
 /*
-* »ñÈ¡Ò³ÃæÔªËØ*/
+* 获取页面元素*/
 var pro_btn=document.getElementById('pro-btn');
 var pos_btn=document.getElementById('pos-btn');
 var serch_btn=document.getElementById('serch-btn');
-var time;//setinterval±äÁ¿
+var time;//setinterval标记
 pro_btn.onclick=function(){
     nodelist=[];
     index=0;
