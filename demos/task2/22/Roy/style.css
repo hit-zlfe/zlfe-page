@@ -1,0 +1,29 @@
+.root {
+	width: 90%;
+	height: 400px;
+	margin: 20px auto;
+	border: 1px solid #e6e6e6;
+	text-align: center;
+}
+.son1 {
+	height: 340px;
+}
+.son2 {
+	height: 280px;
+}
+.son3 {
+	height: 200px;
+}
+.son {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 40%;
+	border: 5px solid #e6e6e6;
+	margin: 25px 1%;
+	text-align: center;
+	background-color: #fff;
+}
+#order {
+	width: 300px;
+	margin: 20px auto;
+}
