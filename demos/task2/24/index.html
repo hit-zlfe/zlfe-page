@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baidu IFE Task 24</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="main.css" type="text/css"/>
+</head>
+<body>
+    <ul id="tree">
+        <li id="root" class="node">
+            <p>百度</p>
+            <ul>
+                <li id="left1" class="node"><p>移动服务事业群</p>
+                    <ul>
+                        <li id="left21" class="node"><p>贴吧</p>
+                            <ul>
+                                <li id="left31" class="node"><p>贴吧API</p></li>
+                            </ul>
+                        </li>
+                        <li id="left22" class="node"><p>移动云</p>
+                            <ul>
+                                <li id="left32" class="node"><p>移动云API</p></li>
+                            </ul>
+                        </li>
+                        <li id="left23" class="node"><p>LBS</p>
+                            <ul>
+                                <li id="left33" class="node"><p>LBS开发</p></li>
+                                <li id="left34" class="node"><p>运维</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="right1" class="node"><p>搜索业务群</p>
+                    <ul>
+                        <li id="right21" class="node"><p>百度糯米</p>
+                            <ul>
+                                <li id="right31" class="node"><p>糯米平台</p></li>
+                                <li id="right32" class="node"><p>移动接口</p></li>
+                                <li id="right33" class="node"><p>推广宣传</p></li>
+                            </ul>
+                        </li>
+                        <li id="right22" class="node"><p>搜索事业群</p>
+                            <ul>
+                                <li id="right34" class="node"><p>算法支持</p></li>
+                                <li id="right35" class="node"><p>数据统计</p></li>
+                                <li id="right36" class="node"><p>设备管理</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="contral">
+        <input type="text" id="serch-input" placeholder="请输入检索内容,模糊查找">
+        <button class="btn" id="serch-btn">搜索</button>
+        <h3>其它功能请在左侧右击鼠标</h3>
+        <p>(Tips:最好不要删除根节点百度，否则就木有东西了)</p>
+    </div>
+    <div id="menus">
+        <div id="creat">新建</div>
+        <div id="rename">重命名</div>
+        <div id="delete">删除</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
