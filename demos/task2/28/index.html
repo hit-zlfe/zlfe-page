@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baidu IFE Task 24</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="static/main.css" type="text/css"/>
+
+<body>
+    <section id="union">
+        <section id="planet"></section>
+        <section id="row1" class="orbit"></section>
+        <section id="row2" class="orbit"></section>
+        <section id="row3" class="orbit"></section>
+        <section id="row4" class="orbit"></section>
+        <div id="ship1" class="ship">
+            <div class="energy"></div>
+        </div>
+        <div id="ship2" class="ship">
+            <div class="energy"></div>
+        </div>
+        <div id="ship3" class="ship">
+            <div class="energy"></div>
+        </div>
+        <div id="ship4" class="ship">
+            <div class="energy"></div>
+        </div>
+    </section>
+    <aside id="side">
+        <section id="fire-center">
+            <h3>发射中心</h3>
+            <select id="power-sys">
+                <option value="前进号">前进号</option>
+                <option value="奔腾号">奔腾号</option>
+                <option value="超越号">超越号</option>
+            </select>
+            <select id="energy-sys">
+                <option value="劲量型">劲量型</option>
+                <option value="光能型">光能型</option>
+                <option value="永久型">永久型</option>
+            </select>
+            <select id="orbit-select">
+                <option value="1">一号轨道</option>
+                <option value="2">二号轨道</option>
+                <option value="3">三号轨道</option>
+                <option value="4">四号轨道</option>
+            </select>
+            <button id="creat-ship">发射飞船</button>
+        </section>
+        <section id="ship-state">
+            <h3>飞船状态</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>飞船编号</td><td>动力系统</td><td>能源系统</td><td>飞行状态</td><td>能源储备</td>
+                    </tr>
+                </thead>
+                <tbody id="ship-tbody">
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="ship-contral">
+            <h3>控制中心</h3>
+            <div class="ship-contral">
+                <button class="fly">启动</button>
+                <button class="stop">停止</button>
+                <button class="destroy">销毁</button>
+            </div>
+            <div class="ship-contral">
+                <button class="fly">启动</button>
+                <button class="stop">停止</button>
+                <button class="destroy">销毁</button>
+            </div>
+            <div class="ship-contral">
+                <button class="fly">启动</button>
+                <button class="stop">停止</button>
+                <button class="destroy">销毁</button>
+            </div>
+            <div class="ship-contral">
+                <button class="fly">启动</button>
+                <button class="stop">停止</button>
+                <button class="destroy">销毁</button>
+            </div>
+        </section>
+    </aside>
+    <script src="static/seajs/sea.js"></script>
+    <script>
+        // seajs 的简单配置
+        seajs.config({
+            base: "static/seajs/",
+            alias: {
+
+            }
+        });
+        // 加载入口模块
+        seajs.use("./static/main");
+    </script>
+</head>
+</body>
+</html>
