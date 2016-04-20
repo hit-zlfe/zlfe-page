@@ -1,0 +1,9 @@
+body{
+	background: whitesmoke;
+}
+.hint {
+	color: green;
+}
+.wrong {
+	color: red;
+}

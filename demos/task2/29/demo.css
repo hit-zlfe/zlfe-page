@@ -1,0 +1,39 @@
+body{
+	background: whitesmoke;
+}
+.wrap{
+	height: 100px;
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 300px;
+}
+.wrap input{
+	outline: none;
+	height: 50px;
+	float: left;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+.text{
+	padding: 0;
+	/*border:1px solid #00BFFF;*/
+	height: 50px;
+	line-height: 35px;
+	width: 70%;
+}
+.button{
+	margin-left: 40px;
+	height: 50px;
+	width: 10%;
+	background: orangered;
+	color: #FFFFFF;
+	border: 0;
+	border-radius: 7px;
+}
+.mistake{
+	height: 50px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: #a8a8a8;
+	clear: both;
+}

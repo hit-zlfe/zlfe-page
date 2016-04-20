@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <link rel="stylesheet" href="demo.css"/>
+	</head>
+	<body>
+    <form>
+        <fieldset id="student">
+            <label for="undergraduate"><input id="undergraduate" type="radio" name="people" value="在校生"> 在校生</label>
+            <label for="graduate"><input id="graduate" type="radio" name="people" value="非在校生"> 非在校生</label>
+        </fieldset>
+        <fieldset id="college">
+            <label for="city">你的城市：
+                <select id="city" name="city">
+                    <option selected value="艾欧尼亚" label="艾欧尼亚">艾欧尼亚</option>
+                    <option value="均衡教派" label="均衡教派">均衡教派</option>
+                    <option value="黑色玫瑰" label="黑色玫瑰">黑色玫瑰</option>
+                    <option value="诺克萨斯" label="诺克萨斯">诺克萨斯</option>
+                    <option value="德玛西亚" label="德玛西亚">德玛西亚</option>
+                    <option value="班德尔城" label="班德尔城">班德尔城</option>
+                </select>
+            </label>
+            <label for="school">你的学校：
+                <select id="school" name="school"></select>
+            </label>
+        </fieldset>
+        <fieldset id="company">
+            <label for="corporation">你就职的公司：<input id="corporation" type="text" name="corporation" placeholder="请填写公司名称"></label>
+        </fieldset>
+    </form>
+    <script type="text/javascript" src="query.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+    </body>
+</html>
