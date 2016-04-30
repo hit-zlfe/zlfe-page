@@ -20,8 +20,8 @@ define(function(require,exports,module){
 				 "./static/img/4.jpg",
 				 "./static/img/5.jpg",
 				 "./static/img/6.jpg"];
-	var jgsawWidth="280";
-	var jgsawHeight="210";
+	var jgsawWidth="500";
+	var jgsawHeight="360";
 	module.exports={
 		imgsUrl_1:imgsUrl_1,
 		imgsUrl_2:imgsUrl_2,
