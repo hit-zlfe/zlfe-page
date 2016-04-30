@@ -73,6 +73,23 @@ define(function(require,exports,module){
 			var clip2=document.getElementById('clip2');
 			var currWidth=document.getElementsByClassName("jgsaw-2")[0].getElementsByTagName("img")[1].width;
 			clip2.innerHTML="<polygon points=\""+boxWidth*0.6666/currWidth+" 0,1 0,1 1,"+boxWidth*0.3334/currWidth+" 1\">";
-		}								
+		}
+		var shadow=document.getElementsByClassName("shadow")[0];
+		var jgsaw_wall=document.getElementsByClassName("jgsaw");
+			document.onclick=function(ev){
+				var ev=ev||window.ev;
+				var target=ev.target;
+				if(target.tagName.toString().toUpperCase()=="IMG"&&target.parentNode.className.indexOf("jgsaw")>-1){
+					var img =document.createElement("img");
+					img.src=target.src;
+					shadow.appendChild(img);				
+					shadow.style.display="block";
+				}
+				else{
+					shadow.innerHTML="";
+					shadow.style.display="";
+				}
+			}
+							
 	}
 })
