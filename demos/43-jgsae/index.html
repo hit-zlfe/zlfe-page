@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>拼图布局</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="static/main.css" type="text/css"/>
+</head>
+<body>
+<div class="jgsaw jgsaw-1">
+</div>
+<div class="jgsaw jgsaw-2">
+</div>
+<div class="jgsaw jgsaw-3">
+</div>
+<div class="jgsaw jgsaw-4">
+</div>
+<div class="jgsaw jgsaw-5">
+</div>
+<div class="jgsaw jgsaw-6">
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+   <clipPath id="clip1" clipPathUnits="objectBoundingBox">
+    <polygon points="0 0,1 0,0.5 1,0 1">
+    </polygon>
+  </clipPath>
+  <clipPath id="clip2" clipPathUnits="objectBoundingBox">
+    <polygon points="0.2 0,1 0,1 1,0.5 1">
+    </polygon>
+  </clipPath>
+</svg> 
+<script src="./static/sea.js"></script>
+    <script>
+        // seajs 的简单配置
+        seajs.config({
+            base: "static/seajs/",
+            alias: {
+
+            }
+        });
+        // 加载入口模块
+        seajs.use("./static/main");
+    </script>
+</body>
+</html>
