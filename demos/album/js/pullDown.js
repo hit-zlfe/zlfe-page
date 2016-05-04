@@ -11,7 +11,6 @@ pullDown.prototype = {
 		EventUtil.addHandler(document,"scroll",function() {
 			if(self.check() && self.cask.data.length !== self.cask.end) {
 				self.cask.getPhoto(self.num);
-				console.log(self.scrollTop);
 				document.documentElement.scrollTop = self.scrollTop;
 			}
 		});

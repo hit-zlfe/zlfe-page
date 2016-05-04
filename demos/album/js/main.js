@@ -11,12 +11,18 @@
 	'http://7xrbxc.com1.z0.glb.clouddn.com/FvaOjagiAKaSp6cc-w58LO9Teua0',
 	'http://7xrbxc.com1.z0.glb.clouddn.com/FlVS5b8EDUczs1HGH0xoArxVLqbQ',
 	'http://7xrbxc.com1.z0.glb.clouddn.com/FpoijcrTNolDBKuxW4z20Uw92g3M',
-	'http://7xrbxc.com1.z0.glb.clouddn.com/Fhv0Qp2yKYgwh013b_zrjL6igLXD',
-	'http://7xrbxc.com1.z0.glb.clouddn.com/FgF2sAMnzUfH5GuNZAWNHtUaY8py',
-	'http://7xrbxc.com1.z0.glb.clouddn.com/FgZ5A2OKSTsTMdEWio11OGE0bKN6',
-	'http://7xrbxc.com1.z0.glb.clouddn.com/Fil_AihnCSN_zGjfbM4o7HvespGB',
-	'http://7xrbxc.com1.z0.glb.clouddn.com/Fk1aEQCE7gaKOYWSb1YPsB42qwvb']
-
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FpP1ZSgv2uizxyUOmBe0xO9I6AZB',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FrSPBXbpL2Gs4VOTsdqc2OSOP8Qc',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FsS0baJIgkZF2chpk_c1F1OnSfYA',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FmqFVzBlhbczSnzjh53Qz5mSyZkB',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FkI2Z-1Z1xeiI0UK1ckM3iOpY78p',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FsnuRGWOVgeE1Nyb_5OVT9bREXsf',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FreNcgPy2SHOxPbXv09MNyrBW9j4',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/Ftgo-yAxfoCXDfMQsEZTD9HXsR52',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/Fibqr6ZOxqZLk9W5A6fHH1PkX1wd',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FvIPM8rivGByxAhlKOUXiGr8NycC',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/FqhnfTfmwXrhtlLAQ4li1oHa2eNS',
+	'http://7xrbxc.com1.z0.glb.clouddn.com/Fhv0Qp2yKYgwh013b_zrjL6igLXD']
 	var cask = new Cask("#container",data);
 	cask.init();
 	var oPull = new pullDown(10,cask);
