@@ -1,0 +1,16 @@
+*{
+	padding: 0;
+	margin:0;
+	
+}
+
+.album{
+	
+	border:solid 10px black;
+	
+}
+button{
+	width: 100px;
+	height: 50px;
+}
+
