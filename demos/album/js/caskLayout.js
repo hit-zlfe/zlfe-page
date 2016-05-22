@@ -11,13 +11,14 @@ function Cask(selector,data) {
 	this.lineMaxNum = 5;   //每行最多图片数量
 	this.photoMinHeight = 200;  //图片最小高度
 	this.photoMaxHeight = 300;  //图片最大高度
-	this.firstScreen = 10;   //首屏图片数量
+	this.firstScreen = 15;   //首屏图片数量
 	this.end = 0;            //当前图片展示终止位置
 }  
 
 Cask.prototype = {
 	constructor: Cask,
 	init: function() {
+		console.log(this.data.length);
 		var container = $(this.container)
 		container.style.width = this.wholeWidth+"px";
 		this.getPhoto(this.firstScreen);
