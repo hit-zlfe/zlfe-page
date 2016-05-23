@@ -243,7 +243,11 @@
     IfeAlbum.prototype.setImage = function (image, option) {
         var dAlbume=document.getElementsByClassName("album")[0];
         dAlbume.innerHTML="";
-        dAlbume.style="";
+        var dclass=dAlbume.className;
+        var did=dAlbume.id;
+        dAlbume.outerHTML="<div id=\"container\" class=\"album\"></div>"
+        dAlbume.className=dclass;
+        dAlbume.id=did;
         var imgs=dAlbume.getElementsByTagName("img");
         for(var i=0;i<imgs.length;i++){
 
@@ -775,7 +779,7 @@
                 container.appendChild(imgFragment);
             },
             delPhoto: function() {
-                container = document.getElementById(this.container);;
+                var container = document.getElementById(this.container);;
                 for(var i=0;i<this.curNum;i++) {
                     container.removeChild(container.lastElementChild);
                     this.showNum--;
@@ -925,21 +929,7 @@
                 father.appendChild(columnDiv);
               }
               //添加事件监听
-              if(cfg.isClickShowDetail){
-                function showDetail(){
-                    
-                    var detail = document.createElement("div");
-                    var detail_img = document.createElement("img");
-                    detail_img.src = event.target.getAttribute('src');
-                    addClass(detail,"detail");
-                    detail.appendChild(detail_img);
-                    document.body.appendChild(detail);
-                    addEvent(detail,"click",function(){
-                        document.body.removeChild(detail);
-                    })
-                }
-                delegateEvent(father, "img", "click", function(event){showDetail(event)});
-              }
+              
             },
 
             getMinHeightIndex: function() {
@@ -961,7 +951,9 @@
 
                 var content = document.createElement("div");
                 addClass(content,cfg.fallClass);
-                document.getElementById(cfg.fatherId).appendChild(content);
+                var bul= document.getElementById(cfg.fatherId);
+               // console.log(bul)
+                bul.appendChild(content);
                 //content.style.height = (Math.random()*100+100)+"px";
                 content.style.margin = (cfg.pix/2) +"px";
 
