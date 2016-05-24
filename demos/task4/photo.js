@@ -306,6 +306,7 @@
             return;
         }
         this.imgUrls=this.imgUrls.concat(image);
+        console.log(this.imgUrls)
         this.rendImageDomElements();
     };
 
@@ -485,7 +486,14 @@
     */
     IfeAlbum.prototype.rendPuzzle = function() {
         var dAlbume=document.getElementsByClassName("album")[0];
+        dAlbume.innerHTML="";
         var imglength=this.imgUrls.length;
+        if(imglength>=7){
+            this.rendWaterfull();
+            return;
+        }
+        dAlbume.className="album";
+        
         var puzzleClass="jgsaw jgsaw-"+imglength;
         addClass(dAlbume,puzzleClass);
 
@@ -900,6 +908,7 @@
         var album=this;
         var dAlbume=document.getElementsByClassName("album")[0];
         dAlbume.id="waterfall";
+        dAlbume.className="album";
         function Waterfall(){
             this.cfg = {
                 fatherId: "waterfall",      //默认父容器的id

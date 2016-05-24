@@ -28,7 +28,8 @@ var imgUrls=["http://www.wed114.cn/jiehun/uploads/allimg/150303/39_150303100501_
 var bimgurls=["http://npic7.edushi.com/cn/zixun/zh-chs/2016-01/07/6-151016161357.jpg",
 "http://tu.webps.cn/tb/img/4/T14I5tFOtXXXXXXXXX_%21%210-item_pic.jpg",
 "http://img5.pcpop.com/ArticleImages/fnw/2016/0331/a1e4454c-5486-4052-b8ab-fd3d699440f9.jpg",
-"http://www.ygjj.com/bookpic2/2015-09-11/new533592-20150911125825527112.jpg"]
+"http://www.ygjj.com/bookpic2/2015-09-11/new533592-20150911125825527112.jpg"];
+var addlist=['http://7xrbxc.com1.z0.glb.clouddn.com/FqhnfTfmwXrhtlLAQ4li1oHa2eNS']
 
 window.ifeAlbum.setImage(bimgurls,"PUZZLE");
 window.ifeAlbum.rendImageDomElements();
@@ -47,4 +48,9 @@ var btn3=document.getElementById("btn3");
 btn3.onclick=function(){
     window.ifeAlbum.setImage(imgUrls,"BARREL");
     window.ifeAlbum.rendImageDomElements();
+}
+var btn4=document.getElementById("btn4");
+btn4.onclick=function(){
+    window.ifeAlbum.addImage(addlist);
+    
 }
